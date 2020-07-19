@@ -1,0 +1,12 @@
+version: '3'
+
+services: 
+    valorizei-container:
+        image: valorizei:1
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        volumes: 
+            - /data/valorizei
+        ports:
+            - "8080:8080"
